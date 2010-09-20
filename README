@@ -1,0 +1,12 @@
+DUGONG FUZZ
+
+Dugong fuzz is a SIMPLE file fuzzer written in perl6. It was written as an excuse to get more familiar with perl6 and show that you can write useful software using the rakudo star perl6 early adopters release. It uses an simple genetic approach to mangle the "X and Y bits" or two parent files to produce a new file (a child). This is adopted from a similar qbasic file I had for pmars (core wars) back in the days.
+
+USAGE
+Dugong fuzz takes two arguments, one is a directory of input files, the second is a number of files (children) to generate.
+
+TODO
+Make this application "useful"
+
+CONTACT
+Bug me on github/twitter @wireghoul
