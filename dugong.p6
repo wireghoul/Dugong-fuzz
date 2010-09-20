@@ -26,13 +26,11 @@ sub mix_file {
     my $matFN = pick_parent( $dir, $patFN );
 	my $patFH = slurp "$dir/$patFN";
 	my $matFH = slurp "$dir/$matFN";
+	# TODO: interpolate function calls and add configurable chunking
 	my @father = $patFH.split('');
 	my @mother = $matFH.split('');
 	my $chunks = [min]  @father.elems, @mother.elems;
 	$chunks = $chunks + rand * (([max] @father.elems, @mother.elems) - $chunks);
-	#say "Making babies with $chunks chunks of code";
-	#say "Father: $patFN has {@father.elems} chunks";
-	#say "Mother: $matFN has {@mother.elems} chunks";
 	my $outFH = open $outfile, :w;
 	for 0..$chunks -1 {
 	    my @choice = ();
